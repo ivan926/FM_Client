@@ -3,14 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-
-
-
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,7 +17,26 @@
         android:theme="@style/Theme.Client"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".search_recycler_activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".searchActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".settings_activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".main_activity_container"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".person_activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -34,12 +50,15 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCSaB69E2uRm23nQ57t9oN65vC5KZwFa3Y"
+            android:value="AIzaSyCSaB69E2uRm23nQ57t9oN65vC5KZwFa3Y" />
 
-        />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
 
-        <uses-library android:name="org.apache.http.legacy" android:required="false" />
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".MainActivity"
@@ -50,7 +69,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

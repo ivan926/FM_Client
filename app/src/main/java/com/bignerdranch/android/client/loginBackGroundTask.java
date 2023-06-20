@@ -65,7 +65,7 @@ public class loginBackGroundTask implements Runnable {
 
            dataCache instanceOfDataCache = dataCache.getInstance();
 
-           instanceOfDataCache.setListOfPeople(family,loginResponse.getUsername(),familyEvents);
+           instanceOfDataCache.setListOfPeople(family,loginResponse.getUsername(),familyEvents,loginResponse.getPersonID());
            sendMessage(family[family.length-1].getFirstName(), family[family.length-1].getLastName());
        }
        catch(Exception E)

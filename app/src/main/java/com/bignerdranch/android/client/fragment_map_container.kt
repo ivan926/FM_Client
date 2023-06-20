@@ -22,7 +22,7 @@ class fragment_map_container : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_map_container, container, false)
+        return inflater.inflate(R.layout.map_container, container, false)
     }
 
 

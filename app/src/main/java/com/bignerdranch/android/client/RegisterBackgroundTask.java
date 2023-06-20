@@ -74,7 +74,7 @@ public class RegisterBackgroundTask implements Runnable{
 
             dataCache instanceOfDataCache = dataCache.getInstance();
 
-            instanceOfDataCache.setListOfPeople(family,registerResponse.getUsername(),familyEvents);
+            instanceOfDataCache.setListOfPeople(family,registerResponse.getUsername(),familyEvents,registerResponse.getPersonID());
             sendMessage(family[family.length-1].getFirstName(), family[family.length-1].getLastName());
         }
         catch(Exception E)

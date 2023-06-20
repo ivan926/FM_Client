@@ -25,6 +25,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="mapFragmentMessage">Click on marker to see event details`</string>
+    <string name="First_Name">First Name</string>
+    <string name="Last_Name">Last Name</string>
+    <string name="Person_Gender">Gender</string>
+    <string name="group_title_event">Life Events</string>
+    <string name="group_title_family">Family</string>
+    <string name="search">Search item</string>
+    <string name="settings">Settings item</string>
+    <string name="Up_button">Up Button</string>
+    <string name="logout">RETURN TO LOGIN SCREEN</string>
+    <string name="logout_title">logout</string>
+    <string name="femaleEvent_switch_description">FILTER EVENT\'S BASED ON GENDER</string>
 
 
 </resources>

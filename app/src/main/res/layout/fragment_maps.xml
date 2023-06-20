@@ -3,23 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <fragment
-        android:id="@+id/map"
+        android:id="@+id/maps"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/mapTextView"
-        tools:context=".MapsFragment"/>
+        tools:context=".MapsFragment"
+        tools:layout="@layout/fragment_maps" />
 
     <TextView
         android:id="@+id/mapTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
+        android:layout_margin="0dp"
+        android:padding="50dp"
         android:text="@string/mapFragmentMessage"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="23sp"
         android:layout_alignParentBottom="true"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/android_48_mdpi"/>
 
 </RelativeLayout>

@@ -3,14 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_map_container">
+    tools:context=".fragment_map_container"
+    android:id="@+id/google_map_container_activity"
+    >
 
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/google_map" />
-
-    <!-- TODO: Update blank fragment layout -->
 
 </FrameLayout>
