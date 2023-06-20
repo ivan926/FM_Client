@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -329,6 +330,26 @@ public class search_recycler_activity extends AppCompatActivity {
                 context.startActivity(intent);
             }
         }
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        Toast toast = new Toast(this);
+        toast.setDuration(Toast.LENGTH_SHORT);
+
+        switch (item.getItemId()) {
+            case android.R.id.home: {
+                // Settings
+                Intent intent = new Intent(this,MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
 

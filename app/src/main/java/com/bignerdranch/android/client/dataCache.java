@@ -110,15 +110,19 @@ public class dataCache {
     private void map_person_to_spouse()
     {
         spouse_of_person = new HashMap<String, ArrayList<Person>>();
-        ArrayList spouse_container;
+        ArrayList<Person> spouse_container;
         //when trying to find an individual with no spouse use contains method for map
         for (Map.Entry<String,Person> entry : PersonMap.entrySet())
         {
 
             if(entry.getValue().getSpouseID() != null)
             {
+                String spouseID = entry.getValue().getSpouseID();
+                Person spouseObject = PersonMap.get(spouseID);
                 spouse_container = new ArrayList<>();
-                spouse_container.add(PersonMap.get(entry.getValue().getSpouseID()));
+
+                spouse_container.add(spouseObject);
+
                 spouse_of_person.put(entry.getKey(),spouse_container);
 
 
@@ -207,6 +211,7 @@ public class dataCache {
 
     }
 
+    //sorting birth and death events if they exist
     private void sortEventshelper(String eventID,ArrayList<Event> arrayOfEvents)
     {
         Boolean swapped = false;
@@ -530,6 +535,11 @@ public class dataCache {
 
 
     private ArrayList<String> colorHues;
+
+    public ArrayList<String> getColorHuesArray()
+    {
+        return colorHues;
+    }
 
     private Map EventMarkerColors;
 

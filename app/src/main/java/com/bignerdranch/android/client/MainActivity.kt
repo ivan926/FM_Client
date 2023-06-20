@@ -29,11 +29,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-
-
         //inflating the layout
          setContentView(R.layout.activity_main)
-
 
 
 
@@ -59,7 +56,7 @@ class MainActivity : AppCompatActivity() {
      fun switchToMapFragment()
     {
         val Mapsfragment = google_map_fragment()
-        supportFragmentManager.beginTransaction().add(R.id.activity_main,Mapsfragment)
+        supportFragmentManager.beginTransaction().replace(R.id.activity_main,Mapsfragment)
             .commit()
     }
 

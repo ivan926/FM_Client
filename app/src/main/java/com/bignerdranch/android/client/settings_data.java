@@ -78,19 +78,19 @@ public class settings_data {
     }
 
     //by default all settings are turned on when first
-    private Boolean life_story_line = true;
+    private Boolean life_story_line = false;
 
-    private Boolean family_tree_line = true;
+    private Boolean family_tree_line = false;
 
-    private Boolean spouse_line = true;
+    private Boolean spouse_line = false;
 
-    private Boolean father_side_line = true;
+    private Boolean father_side_line = false;
 
-    private Boolean mother_side = true;
+    private Boolean mother_side = false;
 
-    private Boolean male_event_side = true;
+    private Boolean male_event_side = false;
 
-    private Boolean female_event_side = true;
+    private Boolean female_event_side = false;
 
 
 

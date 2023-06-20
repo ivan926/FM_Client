@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -50,7 +51,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCSaB69E2uRm23nQ57t9oN65vC5KZwFa3Y" />
+            android:value="AIzaSyCy4TG41yRxDQKDw-cHRKyQoxiyUObFH_M" />
 
         <uses-library
             android:name="org.apache.http.legacy"

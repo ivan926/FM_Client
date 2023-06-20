@@ -2,6 +2,7 @@ package com.bignerdranch.android.client;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,6 +34,8 @@ public class settings_activity extends AppCompatActivity {
 
     private settings_data settings;
 
+    private Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,13 +65,15 @@ public class settings_activity extends AppCompatActivity {
 
         life_story_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
                 if(isChecked == true)
                 {
-
+                    Log.d("onChecked_life_story","changing life story to true");
                     settings.setLife_story_line(isChecked);
                     //change settings make changes
                 }
                 else {
+                    Log.d("onChecked_life_story","changing life story to false = " + isChecked);
                     settings.setLife_story_line(isChecked);
                     //change settings
                 }
@@ -188,7 +193,11 @@ public class settings_activity extends AppCompatActivity {
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //logout
+
+                Intent intent = new Intent(context,MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+
             }
         });
 
@@ -200,13 +209,13 @@ public class settings_activity extends AppCompatActivity {
     {
         Log.d("Inside synch function","Synch is being checked");
         //example below called settings method to find out current state
-        life_story_switch.setChecked(false);
-        family_tree_line_switch.setChecked(false);
-        spouse_line_switch.setChecked(true);
-        father_side_switch.setChecked(true);
-        mother_side_switch.setChecked(true);
-        male_events_line_switch.setChecked(true);
-        female_events_line_switch.setChecked(true);
+        life_story_switch.setChecked(settings.getLife_story_line());
+        family_tree_line_switch.setChecked(settings.getFamily_tree_line());
+        spouse_line_switch.setChecked(settings.getSpouse_line());
+        father_side_switch.setChecked(settings.getFather_side_line());
+        mother_side_switch.setChecked(settings.getMother_side());
+        male_events_line_switch.setChecked(settings.getMale_event_side());
+        female_events_line_switch.setChecked(settings.getFemale_event_side());
 
     }
 
